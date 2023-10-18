@@ -11,17 +11,29 @@ public class CheckGuests {
         String guestName = scan.nextLine();
 
         boolean isAuthorized = false;
-        for (int i = 0; i < guests.length ; i++) {
+//        add counter in order to use while loop
+        int i = 0;
+
+//        for (int i = 0; i < guests.length ; i++) {
+//            if (guestName.equals(guests[i])){
+//                isAuthorized = true;
+//                System.out.println("trovato");
+//            }
+//        }
+
+        while(i < guests.length && !isAuthorized) {
             if (guestName.equals(guests[i])){
                 isAuthorized = true;
-                System.out.println("trovato");
             }
+            i++;
         }
-            if (isAuthorized){
-                System.out.println("Please Welcome");
-            } else {
-                System.out.println("Sorry, you are not allowed to enter");
-            }
+
+        if (isAuthorized){
+            System.out.println("Please Welcome");
+        } else {
+            System.out.println("Sorry, you are not allowed to enter");
+        }
+
 
             scan.close();
     }
