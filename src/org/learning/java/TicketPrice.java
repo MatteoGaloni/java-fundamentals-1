@@ -1,9 +1,11 @@
 package org.learning.java;
 
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class TicketPrice {
     public static void main(String[] args) {
+        DecimalFormat format = new DecimalFormat("#.00");
         Scanner scan = new Scanner(System.in);
         System.out.println(" Please enter kilometers");
         int nKilometers = scan.nextInt();
@@ -21,7 +23,7 @@ public class TicketPrice {
 
         if (passengerAge < 18){
             ticketPrice = standardPrice - (standardPrice * ((double) underDiscount /100));
-            System.out.println( "20% off, the price is equal to " + ticketPrice + "€");
+            System.out.println( "20% off, the price is equal to " + format.format(ticketPrice) + "€");
         } else if (passengerAge > 65) {
             ticketPrice = standardPrice - (standardPrice * ((double) overDiscount /100));
             System.out.println( "40% off, the price is equal to " + ticketPrice + "€");
