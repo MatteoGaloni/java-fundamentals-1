@@ -15,12 +15,11 @@ public class CheckGuests {
         int i = 0;
 
 //        for (int i = 0; i < guests.length ; i++) {
-//            if (guestName.equals(guests[i])){
-//                isAuthorized = true;
-//                System.out.println("trovato");
-//            }
-//        }
-
+//     if (guestName.equals(guests[i])){
+//         isAuthorized = true;
+//         System.out.println("trovato");
+//     }
+// }
         while(i < guests.length && !isAuthorized) {
             if (guestName.equals(guests[i])){
                 isAuthorized = true;
@@ -28,11 +27,14 @@ public class CheckGuests {
             i++;
         }
 
-        if (isAuthorized){
-            System.out.println("Please Welcome");
-        } else {
-            System.out.println("Sorry, you are not allowed to enter");
-        }
+//        if (isAuthorized){
+//            System.out.println("Please Welcome");
+//        } else {
+//            System.out.println("Sorry, you are not allowed to enter");
+//        }
+
+//        Shorter solution
+        System.out.println(isAuthorized ? "Please Welcome" : "Sorry, you are not allowed to enter");
 
 
             scan.close();
